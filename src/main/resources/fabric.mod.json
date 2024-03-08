@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "rebirth_for_old_dream2_server_advancements",
+	"version": "${version}",
+	"name": "Rebirth_For_Old_Dream2_server_Advancements",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rebirth_for_old_dream2_server_advancements/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.cjh.advancements.Rebirth_For_Old_Dream2_server_Advancements"
+		],
+		"client": [
+			"com.cjh.advancements.Rebirth_For_Old_Dream2_server_AdvancementsClient"
+		],
+		"fabric-datagen": [
+			"com.cjh.advancements.Rebirth_For_Old_Dream2_server_AdvancementsDataGenerator"
+		]
+	},
+	"mixins": [
+		"rebirth_for_old_dream2_server_advancements.mixins.json",
+		{
+			"config": "rebirth_for_old_dream2_server_advancements.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
